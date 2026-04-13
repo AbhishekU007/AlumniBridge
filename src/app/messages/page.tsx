@@ -74,9 +74,9 @@ export default function InboxPage() {
           </Link>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4">
           {conversations.map((conv) => (
-            <Link key={conv.profile.id} href={`/messages/${conv.profile.id}`}>
+            <Link key={conv.profile.id} href={`/messages/${conv.profile.id}`} className="block">
               <Card className="hover:bg-muted/30 transition-colors cursor-pointer shadow-sm border-muted">
                 <CardContent className="p-4 flex items-center justify-between">
                   <div className="flex items-center gap-4">
